@@ -34,8 +34,16 @@ namespace ChatRevit
         [RelayCommand]
         private void AddAPIKEY()
         {
-            ChatRevit.Default.GPT_API_KEY = input;
-            ChatRevit.Default.Save();
+            if (input != string.Empty)
+            {
+                ChatRevit.Default.GPT_API_KEY = input;
+                ChatRevit.Default.Save();
+                MessageBox.Show("保存成功", "提示");
+            }
+            else
+            {
+                MessageBox.Show("未发现填写的APK_KEY", "提示");
+            }
         }
 
         [ObservableProperty]
@@ -44,7 +52,6 @@ namespace ChatRevit
         [RelayCommand]
         private async void Enter()
         {
-            //const string OPENAI_TOKEN = "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";
             if (ChatRevit.Default.GPT_API_KEY == string.Empty)
             {
                 MessageBox.Show("请先填写API_KEY", "提示");
