@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRevit", "ChatRevit\ChatRevit.csproj", "{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revit.Toolkit.Mvvm", "Revit.Toolkit.Mvvm\Revit.Toolkit.Mvvm.csproj", "{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		RVT_22|Any CPU = RVT_22|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}.RVT_22|Any CPU.ActiveCfg = RVT_22|Any CPU
+		{F7AE93B3-D0F2-4346-9DD6-C2A4E8BC769B}.RVT_22|Any CPU.Build.0 = RVT_22|Any CPU
+		{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}.RVT_22|Any CPU.ActiveCfg = RVT_22|Any CPU
+		{DD476593-4BC1-4B89-A8A0-6BE43DD098A9}.RVT_22|Any CPU.Build.0 = RVT_22|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46271B5E-2A90-467F-BBFA-FEA7F663D814}
+	EndGlobalSection
+EndGlobal

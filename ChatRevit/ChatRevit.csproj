@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<PlatformTarget>x64</PlatformTarget>
+		<UseWPF>true</UseWPF>
+		<Configurations>Debug;Release;RVT_22</Configurations>
+		<StartAction>Program</StartAction>
+		<StartProgram>C:\Program Files\Autodesk\Revit 2022\Revit.exe</StartProgram>
+		<LangVersion>9.0</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Betalgo.OpenAI.GPT3" Version="6.8.3" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.5.0" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Revit.Toolkit.Mvvm\Revit.Toolkit.Mvvm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ChatRevit.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ChatRevit.settings</DependentUpon>
+    </Compile>
+    <Compile Update="ChatRevitPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ChatRevit.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ChatRevit.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
