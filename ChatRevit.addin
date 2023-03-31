@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>ChatRevit</Name>
+    <Assembly>ChatRevit.dll</Assembly>
+    <ClientId>8479a671-8f99-4254-acd7-e76150bedd57</ClientId>
+    <FullClassName>ChatRevit.AppLoad</FullClassName>
+    <VendorId>Kevin</VendorId>
+    <VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
