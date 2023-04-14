@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Autodesk.Revit.UI;
 
 namespace ChatRevit
 {
@@ -81,7 +82,7 @@ namespace ChatRevit
                     {
                         using var tran = new Transaction(document, "chat");
                         tran.Start();
-                        execute(document, response);
+                        execute(document, app.ActiveUIDocument, response);
                         tran.Commit();
                     }
                     catch (Exception e)
@@ -111,8 +112,8 @@ namespace ChatRevit
 
         string systemPersonality => "I want you to act as a Revit Developer. Now Write a Revit C# script of a method.\n" +
                  " - This method provides its functionality as a public function named 'RevitFunction'.\n " +
-                 " - This method has only one parameter called 'document' which is passed in from the previous code " +
-                 "and the type of parameter 'document' is Document.\n " +
+                 " - This method has only two parameter called 'document' and 'uiDocument' which is passed in from the previous code " +
+                 "and the type of parameter 'document' is Document, the type of parameter 'uiDocument' is UIDocument.\n " +
                  " - This method only contains methods available in RevitAPI.\n" +
                  " - This method does not need Transaction.\n" +
                  " - This method immediately does the task when the function is invoked.\n" +
@@ -123,7 +124,7 @@ namespace ChatRevit
                 =>
                  "The task is described as follows:\n" + input;
 
-        private void execute(Document doc, string codeOutput)
+        private void execute(Document doc, UIDocument uiDoc, string codeOutput)
         {
             var codeString = "using System;\n " +
                              "using System.IO;\n " +
@@ -173,7 +174,7 @@ namespace ChatRevit
             object obj = assembly.CreateInstance("Chat.ChatWithRevit");
 
             // 执行方法
-            obj.GetType().GetMethod("RevitFunction").Invoke(obj, new object[] { doc });
+            obj.GetType().GetMethod("RevitFunction").Invoke(obj, new object[] { doc, uiDoc });
         }
     }
 }

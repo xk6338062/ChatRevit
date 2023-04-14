@@ -17,6 +17,9 @@ namespace ChatRevit
             var provider = Ioc.Default.GetService<IDockablePaneService>();
             var paneId = provider.GetDockablePaneId();
             application.RegisterDockablePane(paneId, "ChatRevit", provider);
+            //var pane = application.GetDockablePane(paneId);
+            //if (!pane.IsShown())
+            //    pane.Show();
             return Result.Succeeded;
 
         }

@@ -12,7 +12,7 @@ namespace ChatRevit
 {
     public class ChatRevitService : IDockablePaneService
     {
-        public static string PageGuid = "3C3F2CCB-CA0B-4427-AACE-2694B685A4B2";
+        public static string PageGuid = "A811F969-2114-4AC8-A289-F5A8982946CE";
 
         public ChatRevitService()
         {
@@ -21,6 +21,7 @@ namespace ChatRevit
         public FrameworkElement GetDockablePane()
         {
             var mainPage = Ioc.Default.GetService<ChatRevitPanel>();
+            mainPage.DataContext = Ioc.Default.GetService<ChatRevitViewModel>();
             return mainPage;
         }
 

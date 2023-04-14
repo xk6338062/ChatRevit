@@ -10,10 +10,10 @@ namespace ChatRevit
     {
         public override void RegisterTypes()
         {
-            Services.AddScoped<IDockablePaneService, ChatRevitService>();
+            Services.AddSingleton<IDockablePaneService, ChatRevitService>();
             Services.AddSingleton<IApplicationUI, AppUIManager>();
-            Services.AddScoped(typeof(ChatRevitPanel));
-            Services.AddScoped(typeof(ChatRevitViewModel));
+            Services.AddSingleton(typeof(ChatRevitPanel));
+            Services.AddSingleton(typeof(ChatRevitViewModel));
             Ioc.Default.ConfigureServices(
                 Services
                 .BuildServiceProvider());
